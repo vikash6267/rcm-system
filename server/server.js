@@ -1,4 +1,4 @@
- // Main Express server setup
+// Main Express server setup
 const express = require("express")
 const cors = require("cors")
 const helmet = require("helmet")
@@ -6,10 +6,9 @@ const rateLimit = require("express-rate-limit")
 const compression = require("compression")
 const { AuditMiddleware } = require("./middleware/audit")
 const AuthMiddleware = require("./middleware/auth")
-require("dotenv").config()
 
 const app = express()
-const PORT = process.env.BACKEND_PORT || 3001
+const PORT = process.env.PORT || 3001
 
 // Security middleware
 app.use(
